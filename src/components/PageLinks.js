@@ -1,11 +1,11 @@
 import { pageLinks } from "../data";
 import PageLink from "./PageLink";
 
-const PageLinks = ({ type }) => {
+const PageLinks = ({ ulClass, ulId, itemClass }) => {
   return (
-    <ul className={type + "-links"} id="nav-links">
+    <ul className={ulClass} id={ulId}>
       {pageLinks.map((link) => {
-        return <PageLink key={link.id} {...link} />;
+        return <PageLink key={link.id} {...link} itemClass={itemClass} />;
       })}
     </ul>
   );
